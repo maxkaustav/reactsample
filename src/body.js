@@ -1,14 +1,8 @@
 import React from 'react';
 
-class Name extends React.Component 
-{
-	state ={
-		name: "kaustav",
-		age: "40",
-		looks: "30"
-  };
-  render(){
-    const prop  = this.props.pass;
+  function Name(props){
+    //Since itis stateless ie no need to store data or state so it is UI component we use funtion
+    const prop  = props.pass;
     //console.log(typeof pass.ar)
     function replay(){
       var data = <h3>Hi</h3>
@@ -21,7 +15,8 @@ class Name extends React.Component
       )
     }
     const list1 = prop.map( (element) => {
-      return(
+      if (element.age>25){
+        return(
         <div className="element">
           <h5>{element.name}</h5>
           <hr />
@@ -30,6 +25,7 @@ class Name extends React.Component
           <h5>{element.looks}</h5>
         </div>
       )
+        }
     })
     return(
       <div className="listm">
@@ -39,6 +35,6 @@ class Name extends React.Component
     )
   };
 
-}
+
 
 export default Name;
