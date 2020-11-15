@@ -6,7 +6,9 @@ class Name extends React.Component
 		name: "kaustav",
 		age: "40",
 		looks: "30"
-	};
+  };
+  prop = this.props;
+
   render(){
     return(
       <div>
@@ -15,6 +17,11 @@ class Name extends React.Component
         <h5>{this.state.age}</h5>
         <hr />
         <h5>{this.state.looks}</h5>
+        <h5>{this.prop.name}</h5>
+        <hr />
+        <h5>{this.prop.age}</h5>
+        <hr />
+        <h5>{this.prop.looks}</h5>
       </div>
       )
   };

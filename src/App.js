@@ -9,7 +9,7 @@ class App extends React.Component
     return(
       <div>
         <h1>My App</h1>
-        <Name></Name>
+        <Name name="Yalu" age="25" looks="26"></Name>
       </div>
       )
   };
