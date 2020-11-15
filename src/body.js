@@ -7,23 +7,36 @@ class Name extends React.Component
 		age: "40",
 		looks: "30"
   };
-  prop = this.props;
-
   render(){
-    return(
-      <div>
-        <h5>{this.state.name}</h5>
-        <hr />
-        <h5>{this.state.age}</h5>
-        <hr />
-        <h5>{this.state.looks}</h5>
-        <h5>{this.prop.name}</h5>
-        <hr />
-        <h5>{this.prop.age}</h5>
-        <hr />
-        <h5>{this.prop.looks}</h5>
-      </div>
+    const prop  = this.props.pass;
+    //console.log(typeof pass.ar)
+    function replay(){
+      var data = <h3>Hi</h3>
+      var datatotal=[]
+      for(var i=0;i<5;i++){
+        datatotal.push(data)
+      };
+      return(
+        datatotal
       )
+    }
+    const list1 = prop.map( (element) => {
+      return(
+        <div className="element">
+          <h5>{element.name}</h5>
+          <hr />
+          <h5>{element.age}</h5>
+          <hr />
+          <h5>{element.looks}</h5>
+        </div>
+      )
+    })
+    return(
+      <div className="listm">
+        { list1 }
+        { replay() }
+      </div>
+    )
   };
 
 }
