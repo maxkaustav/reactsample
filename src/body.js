@@ -30,7 +30,7 @@ import React from 'react';
     return(
       <div className="listm">
         { list1 }
-        { replay() }
+        { replay }
       </div>
     )
   };

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import Name from './body.js';
+import Db from './inputar.js';
 
 class App extends React.Component 
 { state= {
@@ -17,6 +18,7 @@ class App extends React.Component
       <div>
         <h1>My App</h1>
         <Name pass={this.state.ar}></Name>
+        <Db />
       </div>
       )
   };
