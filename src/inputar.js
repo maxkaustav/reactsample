@@ -13,7 +13,7 @@ class DB extends React.Component{
     };
     handleSubmit =(e) =>{
         e.preventDefault()
-        console.log("Change done")
+        this.props.update(this.state)
     };
     render(){
         return(
